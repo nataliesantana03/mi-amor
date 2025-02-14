@@ -1,0 +1,193 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffc0cb;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+
+}
+
+.container {
+    width: 50%;
+    max-width:350px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+    padding: 5px;
+
+}
+
+.screen {
+    padding: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+h2 {
+    color: #d63384;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    margin: 10px 0;
+}
+
+.keypad button {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    font-size: 25px;
+}
+
+button {
+    background: #ff69b4;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #d63384;
+}
+
+.memories img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.letter {
+    background: pink;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+/* Carrusel */
+.carousel {
+    position: relative;
+    width: 90%;
+    max-width: 600px; 
+    height: 500px;
+    overflow: hidden;
+    margin: 0 auto;
+    border-radius: 10px;
+
+
+}
+
+.carousel-images {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    transition: transform 0.5s ease-in-out;
+}
+
+
+
+.carousel-images img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+/* Botones de navegación */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 64, 129, 0.8);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 22px;
+    z-index: 10;
+
+}
+
+.prev {
+    left: 0px;
+}
+
+.next {
+    right: 0px;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(216, 27, 96, 0.9);
+}
+
+/* 📱 Ajustes para pantallas pequeñas (Samsung, Xiaomi y otros) */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .screen {
+        padding: 20px;
+    }
+
+    /* Ajuste del input en la pantalla de bloqueo */
+    #password {
+        width: 90%;
+        font-size: 18px;
+    }
+
+    .keypad button {
+        width: 25%;
+        font-size: 18px;
+    }
+
+    /* Imágenes en el carrusel */
+    .carousel-images img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Ajustar botones de navegación */
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    /* Mejorar legibilidad en la carta */
+    .letter {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .buttons button {
+        font-size: 16px;
+        padding: 10px;
+    }
+}

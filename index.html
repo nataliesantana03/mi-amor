@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>San Valentín 💖</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Pantalla de bloqueo -->
+        <div id="lock-screen" class="screen">
+            <h2>Ingresa el código mi amor💕</h2>
+            <input type="password" id="password" disabled>
+            <div class="keypad">
+                <button onclick="addNumber(1)">1</button>
+                <button onclick="addNumber(2)">2</button>
+                <button onclick="addNumber(3)">3</button>
+                <button onclick="addNumber(4)">4</button>
+                <button onclick="addNumber(5)">5</button>
+                <button onclick="addNumber(6)">6</button>
+                <button onclick="addNumber(7)">7</button>
+                <button onclick="addNumber(8)">8</button>
+                <button onclick="addNumber(9)">9</button>
+                <button onclick="clearCode()">❌</button>
+                <button onclick="addNumber(0)">0</button>
+                <button onclick="checkCode()">🔓</button>
+            </div>
+        </div>
+
+        <!-- Contenido desbloqueado -->
+        <div id="main-screen" class="screen hidden">
+            <h2>Bienvenida, mi amor 💖</h2>
+            <img src="img/3.jpg" alt="Foto de los dos" class="profile-pic">
+            <p>El amor de mi vida y yo</p>
+            <div class="buttons">
+                <button onclick="showLetter()">💌 Léeme </button>
+                <button onclick="showMemories()">📸 Nuestros Recuerdos</button>
+            </div>
+            <audio id="musicaFondo" src="Because Of You.mp3"></audio>
+            <button id="playMusic">🎵 Reproducir Música</button>
+        </div>
+
+        <!-- Carta -->
+        <div id="letter-screen" class="screen hidden">
+            <h2>para mi niña preciosa 💕</h2>
+            <div class="letter">
+                <p>Desde el primer día en que nuestras miradas se cruzaron en el colegio, supe que eras alguien especial. No hablábamos mucho al principio, solo nos mirábamos, lanzábamos indirectas y dejábamos que el tiempo hiciera su magia. Y vaya que lo hizo.
+
+                    Hemos recorrido un camino largo, lleno de momentos inolvidables, de risas, de aprendizajes y, sí, también de retos. Pero aquí estamos, más fuertes que nunca, demostrando que lo nuestro es real, que la distancia no nos ha vencido, que cada día seguimos eligiéndonos.
+                    
+                    Te amo por quien eres, por la luz que traes a mi vida y por todo lo que hemos construido juntas. No importa cuántos kilómetros nos separen, mi corazón siempre está contigo. Espero con ansias el día en que podamos abrazarnos de nuevo y recuperar cada beso que nos debemos.
+                    
+                    Gracias por ser mi amor, mi hogar, mi mejor historia.
+                    
+                    Feliz San Valentín, mi niña hermosa. 💖
+                    
+                    Con todo mi amor naty (tu amorcito)</p>
+            </div>
+            <button onclick="backToMain()">Cerrar</button>
+        </div>
+
+        <!-- Recuerdos -->
+         
+        <div id="memories-screen" class="screen hidden">
+            <h2>Los mejores momentos vividos con el amor de mi vida 📸</h2>
+
+            <div class="carousel">
+                <div class="carousel-images">
+                    <img src="img/4.jpg" alt="Recuerdo 1">
+                    <img src="img/2.jpg" alt="Recuerdo 2">
+                    <img src="img/1.jpg" alt="Recuerdo 3">
+                    <img src="img/5.jpg" alt="Recuerdo 4">
+                    <img src="img/6.jpg" alt="Recuerdo 5">
+                    <img src="img/7.jpg" alt="Recuerdo 6">
+                    <img src="img/8.jpg" alt="Recuerdo 7">
+                    <img src="img/9.jpg" alt="Recuerdo 8">
+                    <img src="img/10.jpg" alt="Recuerdo 9">
+                    <img src="img/11.jpg" alt="Recuerdo 10">
+                    <img src="img/12.jpg" alt="Recuerdo 11">
+                    <img src="img/13.jpg" alt="Recuerdo 12">
+
+                </div>
+                <button id="prev" class="carousel-btn prev">&#10094;</button>
+                <button id="next" class="carousel-btn next">&#10095;</button>
+            </div>
+            <button onclick="backToMain()">Volver</button>
+
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
